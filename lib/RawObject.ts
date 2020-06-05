@@ -47,6 +47,7 @@ export class RawObject<RV extends unknown, RD extends IRawObjectData>
 
 	inspect()
 	{
+		// @ts-ignore
 		let pad = this[SYMBOL_RAW_DATA] && this[SYMBOL_RAW_DATA].type;
 
 		return 'Raw' + this.getTypeof().replace(/^[a-z]/, function (s)
