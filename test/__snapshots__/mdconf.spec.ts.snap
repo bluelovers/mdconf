@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for blocks should match expected output with no options 1`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for blocks should match expected output with no options 2`] = `
+"# styles
+
+  Just some example styles:
+
+\`\`\`
+body {
+  padding: 50px;
+}
+\`\`\`
+ And some styles for buttons:
+
+\`\`\`
+button {
+  padding: 5px 10px;
+}
+\`\`\`
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for blocks should match expected output with no options 3`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for blocks should match expected output with no options 4`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for code should match expected output with no options 1`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for code should match expected output with no options 2`] = `
+"# styles
+
+  Just some example styles:
+
+\`\`\`scss
+body {
+  padding: 50px;
+}
+\`\`\`
+ And some styles for buttons:
+
+\`\`\`css
+button {
+  padding: 5px 10px;
+}
+\`\`\`
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for code should match expected output with no options 3`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for code should match expected output with no options 4`] = `
+Object {
+  "styles": Array [
+    "body {
+  padding: 50px;
+}",
+    "button {
+  padding: 5px 10px;
+}",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for complex should match expected output with no options 1`] = `
+Object {
+  "defaults": Object {
+    "s3": Object {
+      "api key": "111111",
+      "buckets": Object {
+        "assets": "myapp-assets",
+        "avatars": "myapp-avatars",
+        "files": "myapp-files",
+      },
+      "secret": "222222",
+    },
+    "upload": Object {
+      "dir": "/tmp",
+      "max": "200mb",
+      "thumbnail sizes": Array [
+        "50x50",
+        "300x300",
+        "600x600",
+        "900x900",
+      ],
+    },
+  },
+  "production": Object {
+    "sites": Array [
+      Object {
+        "build": "passing",
+        "coverage": "94%",
+        "hostname": "google.com",
+      },
+      Object {
+        "build": "passing",
+        "coverage": "97%",
+        "hostname": "facebook.com",
+      },
+      Object {
+        "build": "failed",
+        "coverage": "81%",
+        "hostname": "twitter.com",
+      },
+      Object {
+        "build": "unkown",
+        "coverage": "0%",
+        "hostname": "myspace.com",
+      },
+    ],
+    "upload": Object {
+      "max": "200mb",
+    },
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for complex should match expected output with no options 2`] = `
+"# defaults
+
+## upload
+
+- max: 200mb
+- dir: /tmp
+
+### thumbnail sizes
+
+- 50x50
+- 300x300
+- 600x600
+- 900x900
+
+## s3
+
+- api key: 111111
+- secret: 222222
+
+### buckets
+
+- avatars: myapp-avatars
+- assets: myapp-assets
+- files: myapp-files
+
+# production
+
+## upload
+
+- max: 200mb
+
+## sites
+
+### 0
+
+- hostname: google.com
+- build: passing
+- coverage: 94%
+### 1
+
+- hostname: facebook.com
+- build: passing
+- coverage: 97%
+### 2
+
+- hostname: twitter.com
+- build: failed
+- coverage: 81%
+### 3
+
+- hostname: myspace.com
+- build: unkown
+- coverage: 0%
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for complex should match expected output with no options 3`] = `
+Object {
+  "defaults": Object {
+    "s3": Object {
+      "api key": "111111",
+      "buckets": Object {
+        "assets": "myapp-assets",
+        "avatars": "myapp-avatars",
+        "files": "myapp-files",
+      },
+      "secret": "222222",
+    },
+    "upload": Object {
+      "dir": "/tmp",
+      "max": "200mb",
+      "thumbnail sizes": Array [
+        "50x50",
+        "300x300",
+        "600x600",
+        "900x900",
+      ],
+    },
+  },
+  "production": Object {
+    "sites": Array [
+      Object {
+        "build": "passing",
+        "coverage": "94%",
+        "hostname": "google.com",
+      },
+      Object {
+        "build": "passing",
+        "coverage": "97%",
+        "hostname": "facebook.com",
+      },
+      Object {
+        "build": "failed",
+        "coverage": "81%",
+        "hostname": "twitter.com",
+      },
+      Object {
+        "build": "unkown",
+        "coverage": "0%",
+        "hostname": "myspace.com",
+      },
+    ],
+    "upload": Object {
+      "max": "200mb",
+    },
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for complex should match expected output with no options 4`] = `
+Object {
+  "defaults": Object {
+    "s3": Object {
+      "api key": "111111",
+      "buckets": Object {
+        "assets": "myapp-assets",
+        "avatars": "myapp-avatars",
+        "files": "myapp-files",
+      },
+      "secret": "222222",
+    },
+    "upload": Object {
+      "dir": "/tmp",
+      "max": "200mb",
+      "thumbnail sizes": Array [
+        "50x50",
+        "300x300",
+        "600x600",
+        "900x900",
+      ],
+    },
+  },
+  "production": Object {
+    "sites": Array [
+      Object {
+        "build": "passing",
+        "coverage": "94%",
+        "hostname": "google.com",
+      },
+      Object {
+        "build": "passing",
+        "coverage": "97%",
+        "hostname": "facebook.com",
+      },
+      Object {
+        "build": "failed",
+        "coverage": "81%",
+        "hostname": "twitter.com",
+      },
+      Object {
+        "build": "unkown",
+        "coverage": "0%",
+        "hostname": "myspace.com",
+      },
+    ],
+    "upload": Object {
+      "max": "200mb",
+    },
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for empty should match expected output with no options 1`] = `Object {}`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for empty should match expected output with no options 2`] = `
+"
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for empty should match expected output with no options 3`] = `Object {}`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for empty should match expected output with no options 4`] = `Object {}`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html should match expected output with no options 1`] = `
+Object {
+  "html": Array [
+    "<!-- js
+111111111
+<br/>
+-->",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html should match expected output with no options 2`] = `
+"# html
+
+<!-- js
+111111111
+<br/>
+-->
+\`\`\`
+2222
+\`\`\`
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html should match expected output with no options 3`] = `
+Object {
+  "html": Array [
+    "<!-- js
+111111111
+<br/>
+-->",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html should match expected output with no options 4`] = `
+Object {
+  "html": Array [
+    "<!-- js
+111111111
+<br/>
+-->",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html2 should match expected output with no options 1`] = `
+Object {
+  "html": Array [
+    "777",
+    "789",
+    "3333
+
+
+
+
+444
+
+444",
+    "<!-- js
+111111111
+<br/>
+-->",
+    "111",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html2 should match expected output with no options 2`] = `
+"# html
+
+555555555555555
+
+\`\`\`
+777
+\`\`\`
+\`\`\`
+789
+\`\`\`
+\`\`\`
+3333
+
+
+
+
+444
+
+444
+\`\`\`
+555
+
+66
+
+777
+
+888
+
+999
+
+444
+
+<!-- js
+111111111
+<br/>
+-->
+\`\`\`
+111
+\`\`\`
+\`\`\`
+2222
+\`\`\`
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html2 should match expected output with no options 3`] = `
+Object {
+  "html": Array [
+    "777",
+    "789",
+    "3333
+
+
+
+
+444
+
+444",
+    "<!-- js
+111111111
+<br/>
+-->",
+    "111",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for html2 should match expected output with no options 4`] = `
+Object {
+  "html": Array [
+    "777",
+    "789",
+    "3333
+
+
+
+
+444
+
+444",
+    "<!-- js
+111111111
+<br/>
+-->",
+    "111",
+    "2222",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for link should match expected output with no options 1`] = `
+Object {
+  "link": Array [
+    "[dip.jp](https://narou18.dip.jp/search.php?text=n0153ce&novel=all&genre=all&new_genre=all&length=0&down=0&up=100) - 小説家になろう　更新情報検索",
+    "[我的同学是姬骑士吧](https://tieba.baidu.com/f?kw=%E6%88%91%E7%9A%84%E5%90%8C%E5%AD%A6%E6%98%AF%E5%A7%AC%E9%AA%91%E5%A3%AB&ie=utf-8 \\"我的同学是姬骑士\\")",
+    "[姫騎士がクラスメート！　THE COMIC](http://www.comic-valkyrie.com/modules/web_valkyrie/classmate/)",
+    "https://www.lightnovel.cn/forum.php?mod=viewthread&tid=922044",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for link should match expected output with no options 2`] = `
+"# link
+
+- [dip.jp](https://narou18.dip.jp/search.php?text=n0153ce&novel=all&genre=all&new_genre=all&length=0&down=0&up=100) - 小説家になろう　更新情報検索
+- [我的同学是姬骑士吧](https://tieba.baidu.com/f?kw=%E6%88%91%E7%9A%84%E5%90%8C%E5%AD%A6%E6%98%AF%E5%A7%AC%E9%AA%91%E5%A3%AB&ie=utf-8 \\"我的同学是姬骑士\\")
+- [姫騎士がクラスメート！　THE COMIC](http://www.comic-valkyrie.com/modules/web_valkyrie/classmate/)
+- https://www.lightnovel.cn/forum.php?mod=viewthread&tid=922044
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for link should match expected output with no options 3`] = `
+Object {
+  "link": Array [
+    "[dip.jp](https://narou18.dip.jp/search.php?text=n0153ce&novel=all&genre=all&new_genre=all&length=0&down=0&up=100) - 小説家になろう　更新情報検索",
+    "[我的同学是姬骑士吧](https://tieba.baidu.com/f?kw=%E6%88%91%E7%9A%84%E5%90%8C%E5%AD%A6%E6%98%AF%E5%A7%AC%E9%AA%91%E5%A3%AB&ie=utf-8 \\"我的同学是姬骑士\\")",
+    "[姫騎士がクラスメート！　THE COMIC](http://www.comic-valkyrie.com/modules/web_valkyrie/classmate/)",
+    "https://www.lightnovel.cn/forum.php?mod=viewthread&tid=922044",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for link should match expected output with no options 4`] = `
+Object {
+  "link": Array [
+    "[dip.jp](https://narou18.dip.jp/search.php?text=n0153ce&novel=all&genre=all&new_genre=all&length=0&down=0&up=100) - 小説家になろう　更新情報検索",
+    "[我的同学是姬骑士吧](https://tieba.baidu.com/f?kw=%E6%88%91%E7%9A%84%E5%90%8C%E5%AD%A6%E6%98%AF%E5%A7%AC%E9%AA%91%E5%A3%AB&ie=utf-8 \\"我的同学是姬骑士\\")",
+    "[姫騎士がクラスメート！　THE COMIC](http://www.comic-valkyrie.com/modules/web_valkyrie/classmate/)",
+    "https://www.lightnovel.cn/forum.php?mod=viewthread&tid=922044",
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for simple should match expected output with no options 1`] = `
+Object {
+  "uploads": Object {
+    "dir": "/tmp/uploads",
+    "max": "200mb",
+    "min": "1kb",
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for simple should match expected output with no options 2`] = `
+"# uploads
+
+- max: 200mb
+- min: 1kb
+- dir: /tmp/uploads
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for simple should match expected output with no options 3`] = `
+Object {
+  "uploads": Object {
+    "dir": "/tmp/uploads",
+    "max": "200mb",
+    "min": "1kb",
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for simple should match expected output with no options 4`] = `
+Object {
+  "uploads": Object {
+    "dir": "/tmp/uploads",
+    "max": "200mb",
+    "min": "1kb",
+  },
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for table should match expected output with no options 1`] = `
+Object {
+  "sites": Array [
+    Object {
+      "build": "passing",
+      "coverage": "94%",
+      "host": "google.com",
+    },
+    Object {
+      "build": "passing",
+      "coverage": "97%",
+      "host": "facebook.com",
+    },
+    Object {
+      "build": "failed",
+      "coverage": "81%",
+      "host": "twitter.com",
+    },
+    Object {
+      "build": "unkown",
+      "coverage": "0%",
+      "host": "myspace.com",
+    },
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for table should match expected output with no options 2`] = `
+"# sites
+
+## 0
+
+- host: google.com
+- build: passing
+- coverage: 94%
+## 1
+
+- host: facebook.com
+- build: passing
+- coverage: 97%
+## 2
+
+- host: twitter.com
+- build: failed
+- coverage: 81%
+## 3
+
+- host: myspace.com
+- build: unkown
+- coverage: 0%
+"
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for table should match expected output with no options 3`] = `
+Object {
+  "sites": Array [
+    Object {
+      "build": "passing",
+      "coverage": "94%",
+      "host": "google.com",
+    },
+    Object {
+      "build": "passing",
+      "coverage": "97%",
+      "host": "facebook.com",
+    },
+    Object {
+      "build": "failed",
+      "coverage": "81%",
+      "host": "twitter.com",
+    },
+    Object {
+      "build": "unkown",
+      "coverage": "0%",
+      "host": "myspace.com",
+    },
+  ],
+}
+`;
+
+exports[`mdconf integration tests should pass integration tests Test Case(s) for table should match expected output with no options 4`] = `
+Object {
+  "sites": Array [
+    Object {
+      "build": "passing",
+      "coverage": "94%",
+      "host": "google.com",
+    },
+    Object {
+      "build": "passing",
+      "coverage": "97%",
+      "host": "facebook.com",
+    },
+    Object {
+      "build": "failed",
+      "coverage": "81%",
+      "host": "twitter.com",
+    },
+    Object {
+      "build": "unkown",
+      "coverage": "0%",
+      "host": "myspace.com",
+    },
+  ],
+}
+`;

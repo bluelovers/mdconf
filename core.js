@@ -1,4 +1,23 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -7,7 +26,8 @@ exports.stringify = exports.parse = exports.defaultOptionsParse = void 0;
 /**
  * Module dependencies.
  */
-const marked_1 = __importDefault(require("marked"));
+const marked_1 = require("marked");
+const md = __importStar(require("marked"));
 const crlf_normalize_1 = require("crlf-normalize");
 const moment_1 = require("moment");
 const is_plain_object_1 = __importDefault(require("is-plain-object"));
@@ -16,7 +36,7 @@ const core_1 = require("./lib/core");
 exports.defaultOptionsParse = {
     crlf: crlf_normalize_1.LF,
     allowBlockquote: true,
-    markedOptions: Object.assign({}, marked_1.default.defaults, {
+    markedOptions: Object.assign({}, md.defaults, {
         breaks: true,
     }),
 };
@@ -46,7 +66,7 @@ function parse(str, options = {}) {
         eol = ck.lf ? LF : (ck.crlf ? CRLF : CR);
     }
      */
-    let lexer = new marked_1.default.Lexer(options.markedOptions);
+    let lexer = new marked_1.Lexer(options.markedOptions);
     let toks = lexer.lex(source);
     let conf = {};
     let keys = [];

@@ -2,7 +2,7 @@
  * Created by user on 2020/1/15.
  */
 
-import md, { Token, Tokens } from 'marked';
+import { Token, Tokens, InlineLexer, TokensList } from 'marked';
 import { ITokenText2, RawObject, IRawObjectDataPlus } from './RawObject';
 import { IOptionsParse, defaultOptionsParse } from '../core';
 
@@ -126,12 +126,12 @@ export function makeCodeBlock(value, lang?: Tokens.Code["lang"])
 	return `\n\`\`\`${lang || ''}\n${value}\n\`\`\`\n`;
 }
 
-export function createInlineLexer(toks: md.TokensList, options: IOptionsParse)
+export function createInlineLexer(toks: TokensList, options: IOptionsParse)
 {
 	let opts = Object.assign({}, defaultOptionsParse.markedOptions, options.markedOptions);
 
 	// @ts-ignore
-	let inline = new md.InlineLexer(toks.links, opts);
+	let inline = new InlineLexer(toks.links, opts);
 
 	return inline;
 }

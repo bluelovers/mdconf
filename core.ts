@@ -1,7 +1,8 @@
 /**
  * Module dependencies.
  */
-import md, { Token, Tokens } from 'marked';
+import { Token, Tokens, MarkedOptions, Lexer } from 'marked';
+import * as md from 'marked';
 import { crlf, LF, CRLF, CR, chkcrlf } from 'crlf-normalize';
 import { isMoment } from 'moment';
 import isPlainObject from 'is-plain-object';
@@ -21,7 +22,7 @@ export interface IOptionsParse
 
 	disableKeyToLowerCase?: boolean,
 
-	markedOptions?: md.MarkedOptions,
+	markedOptions?: MarkedOptions,
 
 	filterObjectKey?,
 }
@@ -85,7 +86,7 @@ export function parse(str: string | Buffer, options: IOptionsParse = {}): IObjec
 	}
 	 */
 
-	let lexer = new md.Lexer(options.markedOptions);
+	let lexer = new Lexer(options.markedOptions);
 
 	let toks = lexer.lex(source);
 	let conf = {};
@@ -95,7 +96,7 @@ export function parse(str: string | Buffer, options: IOptionsParse = {}): IObjec
 
 	let paragraph: string[] = [];
 	let paragraph2: string[] = [];
-	let last_tok: md.Token;
+	let last_tok: Token;
 	let blockquote_start: boolean;
 
 	let inline_lexer = createInlineLexer(toks, Object.assign({}, options, {

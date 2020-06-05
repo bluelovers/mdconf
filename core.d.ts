@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-import md from 'marked';
+import { MarkedOptions } from 'marked';
 import { LF, CRLF, CR } from 'crlf-normalize';
 import { IRawObjectPlus } from './lib/RawObject';
 export interface IOptionsParse {
@@ -13,7 +13,7 @@ export interface IOptionsParse {
     oldParseApi?: boolean;
     allowBlockquote?: boolean;
     disableKeyToLowerCase?: boolean;
-    markedOptions?: md.MarkedOptions;
+    markedOptions?: MarkedOptions;
     filterObjectKey?: any;
 }
 export declare const defaultOptionsParse: IOptionsParse;
