@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.5...mdconf2@2.0.6) (2020-06-20)
+
+
+### 📦　Code Refactoring
+
+* update typescript and avoid bug of typescript ([9473fd1](https://github.com/bluelovers/mdconf/commit/9473fd159a3e0774e7646ab2dc60d73a4667f09b))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([96a6209](https://github.com/bluelovers/mdconf/commit/96a62099f0774dae433a16b9e20f2c4ddd518749))
+
+
+
+
+
 ## [2.0.5](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.4...mdconf2@2.0.5) (2020-06-09)
 
 **Note:** Version bump only for package mdconf2
