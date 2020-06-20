@@ -4,7 +4,8 @@
 import { stringify as _stringify } from './index';
 declare function stringify(...argv: Parameters<typeof _stringify>): string;
 declare namespace stringify {
-    var default: typeof _stringify;
-    var stringify: typeof _stringify;
+    var _a: typeof _stringify;
+    export var stringify: typeof _stringify;
+    export { _a as default };
 }
 export = stringify;

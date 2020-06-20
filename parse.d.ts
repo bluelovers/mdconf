@@ -7,7 +7,8 @@ import { parse as _parse, IOptionsParse } from './core';
  */
 declare function parse(str: any, options?: IOptionsParse): import("./core").IObjectParse;
 declare namespace parse {
-    var parse: typeof _parse;
-    var default: typeof _parse;
+    export var parse: typeof _parse;
+    var _a: typeof _parse;
+    export { _a as default };
 }
 export = parse;
