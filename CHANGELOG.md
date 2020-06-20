@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.6...mdconf2@2.0.7) (2020-06-20)
+
+
+### 🐛　Bug Fixes
+
+* **deps:** make sure marked will not update by ncu ([89a1d5b](https://github.com/bluelovers/mdconf/commit/89a1d5bf7d572d0784bcc4541994688dff5b33cd))
+
+
+
+
+
 ## [2.0.6](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.5...mdconf2@2.0.6) (2020-06-20)
 
 
