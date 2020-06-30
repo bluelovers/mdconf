@@ -25,7 +25,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isPlainObject = exports.stringify = exports.parse = exports.mdconf = void 0;
+exports.SYMBOL_RAW_DATA = exports.SYMBOL_RAW_VALUE = exports.RawObject = exports.isPlainObject = exports.defaultOptionsParse = exports.stringify = exports.parse = exports.mdconf = void 0;
 const core_1 = __importStar(require("./core"));
 exports.mdconf = core_1.default;
 Object.defineProperty(exports, "parse", { enumerable: true, get: function () { return core_1.parse; } });
