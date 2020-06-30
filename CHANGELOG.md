@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.7...mdconf2@2.0.8) (2020-06-30)
+
+
+### 🛠　Build System
+
+* update .js ([9a06f4e](https://github.com/bluelovers/mdconf/commit/9a06f4ea5bcbb28992702ed75cdd432963caa95c))
+
+
+### ♻️　Chores
+
+* update deps ([f0d8d3d](https://github.com/bluelovers/mdconf/commit/f0d8d3d96cef067e3f1c2bc8c5e4110110d5c25b))
+
+
+
+
+
 ## [2.0.7](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.6...mdconf2@2.0.7) (2020-06-20)
 
 
