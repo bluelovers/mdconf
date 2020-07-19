@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.9...mdconf2@2.0.10) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([c7bc23e](https://github.com/bluelovers/mdconf/commit/c7bc23ed14faf935ec25170eb23010d8f9c685c1))
+
+
+
+
+
 ## [2.0.9](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.8...mdconf2@2.0.9) (2020-06-30)
 
 
