@@ -5,7 +5,7 @@ import { Token, Tokens, MarkedOptions, Lexer } from 'marked';
 import * as md from 'marked';
 import { crlf, LF, CRLF, CR, chkcrlf } from 'crlf-normalize';
 import { isMoment } from 'moment';
-import isPlainObject from 'is-plain-object';
+import { isPlainObject } from 'is-plain-object';
 import { RawObject, IRawObjectTokenPlus, ITokenText2, IRawObjectPlus, IRawObjectDataPlus } from './lib/RawObject';
 import { createInlineLexer, makeCodeBlock, normalize, put, getobjectbyid } from './lib/core';
 

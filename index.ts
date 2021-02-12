@@ -5,7 +5,7 @@
 import mdconf, { parse, stringify } from './core';
 export { mdconf, parse, stringify }
 
-import isPlainObject from 'is-plain-object';
+import { isPlainObject } from 'is-plain-object';
 
 export { IOptionsParse, defaultOptionsParse, IObjectParse } from './core';
 
