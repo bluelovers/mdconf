@@ -21,17 +21,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SYMBOL_RAW_DATA = exports.SYMBOL_RAW_VALUE = exports.RawObject = exports.isPlainObject = exports.defaultOptionsParse = exports.stringify = exports.parse = exports.mdconf = void 0;
 const core_1 = __importStar(require("./core"));
 exports.mdconf = core_1.default;
 Object.defineProperty(exports, "parse", { enumerable: true, get: function () { return core_1.parse; } });
 Object.defineProperty(exports, "stringify", { enumerable: true, get: function () { return core_1.stringify; } });
-const is_plain_object_1 = __importDefault(require("is-plain-object"));
-exports.isPlainObject = is_plain_object_1.default;
+const is_plain_object_1 = require("is-plain-object");
+Object.defineProperty(exports, "isPlainObject", { enumerable: true, get: function () { return is_plain_object_1.isPlainObject; } });
 var core_2 = require("./core");
 Object.defineProperty(exports, "defaultOptionsParse", { enumerable: true, get: function () { return core_2.defaultOptionsParse; } });
 var RawObject_1 = require("./lib/RawObject");

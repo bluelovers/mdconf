@@ -3,9 +3,9 @@
  */
 import mdconf, { parse, stringify } from './core';
 export { mdconf, parse, stringify };
-import isPlainObject from 'is-plain-object';
+import { isPlainObject } from 'is-plain-object';
 export { IOptionsParse, defaultOptionsParse, IObjectParse } from './core';
 export { isPlainObject };
 export { RawObject, SYMBOL_RAW_VALUE, SYMBOL_RAW_DATA } from './lib/RawObject';
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;

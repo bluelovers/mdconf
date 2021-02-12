@@ -18,9 +18,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stringify = exports.parse = exports.defaultOptionsParse = void 0;
 /**
@@ -30,7 +27,7 @@ const marked_1 = require("marked");
 const md = __importStar(require("marked"));
 const crlf_normalize_1 = require("crlf-normalize");
 const moment_1 = require("moment");
-const is_plain_object_1 = __importDefault(require("is-plain-object"));
+const is_plain_object_1 = require("is-plain-object");
 const RawObject_1 = require("./lib/RawObject");
 const core_1 = require("./lib/core");
 exports.defaultOptionsParse = {
@@ -251,7 +248,7 @@ function stringify(dataInput, level = 1, skip = [], k) {
                 rs2.push('#'.repeat(level) + ' ' + k + crlf_normalize_1.LF);
                 rs2.push(stringify(row, level + 1));
             }
-            else if (is_plain_object_1.default(row)) {
+            else if (is_plain_object_1.isPlainObject(row)) {
                 rs2.push('#'.repeat(level) + ' ' + k + crlf_normalize_1.LF);
                 rs2.push(stringify(row, level + 1));
             }
