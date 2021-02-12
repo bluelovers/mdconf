@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.12](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.11...mdconf2@2.0.12) (2021-02-12)
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([1bc0925](https://github.com/bluelovers/mdconf/commit/1bc09257c16754054103f3aec637dcf18f81f25a))
+
+
+
+
+
 ## [2.0.11](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.10...mdconf2@2.0.11) (2020-08-13)
 
 
