@@ -3,7 +3,7 @@ import { readFile } from 'fs-extra';
 import novelInfo from '../index';
 import { join } from 'path';
 
-test(`novel`, async (done) =>
+test(`novel`, async () =>
 {
 
 	let actual = await readFile(join(__dirname, './res/README.md')).then(function (buf)
@@ -16,5 +16,4 @@ test(`novel`, async (done) =>
 	expect(actual).toMatchSnapshot();
 	expect(novelInfo.stringify(actual)).toMatchSnapshot();
 
-	done();
 });
