@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.14](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.13...mdconf2@2.0.14) (2021-07-08)
+
+
+### 🛠　Build System
+
+* update deps and use tslib ([bc00796](https://github.com/bluelovers/mdconf/commit/bc007968e0dde703a1b4e79d147bd7122fe3468b))
+
+
+### 🔖　Miscellaneous
+
+* . ([fd9c06a](https://github.com/bluelovers/mdconf/commit/fd9c06a1e1bc526117eee710e13814cc174c4bf4))
+
+
+
+
+
 ## [2.0.13](https://github.com/bluelovers/mdconf/compare/mdconf2@2.0.12...mdconf2@2.0.13) (2021-02-12)
 
 
