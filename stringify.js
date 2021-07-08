@@ -4,7 +4,7 @@
  */
 const index_1 = require("./index");
 function stringify(...argv) {
-    return index_1.stringify(...argv);
+    return (0, index_1.stringify)(...argv);
 }
 stringify.default = index_1.stringify;
 stringify.stringify = index_1.stringify;

@@ -1,30 +1,12 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stringify = exports.parse = exports.defaultOptionsParse = void 0;
+const tslib_1 = require("tslib");
 /**
  * Module dependencies.
  */
 const marked_1 = require("marked");
-const md = __importStar(require("marked"));
+const md = (0, tslib_1.__importStar)(require("marked"));
 const crlf_normalize_1 = require("crlf-normalize");
 const moment_1 = require("moment");
 const is_plain_object_1 = require("is-plain-object");
@@ -49,7 +31,7 @@ function parse(str, options = {}) {
     if (1) {
         // disable crlf options
         eol = crlf_normalize_1.LF;
-        source = crlf_normalize_1.crlf(source, eol);
+        source = (0, crlf_normalize_1.crlf)(source, eol);
     }
     /*
     else if (options.crlf)
@@ -73,7 +55,7 @@ function parse(str, options = {}) {
     let paragraph2 = [];
     let last_tok;
     let blockquote_start;
-    let inline_lexer = core_1.createInlineLexer(toks, Object.assign({}, options, {}));
+    let inline_lexer = (0, core_1.createInlineLexer)(toks, Object.assign({}, options, {}));
     /*
     let _inline_md = new MarkdownIt({
         linkify: false,
@@ -94,7 +76,7 @@ function parse(str, options = {}) {
             case 'heading':
                 while (depth-- >= tok.depth)
                     keys.pop();
-                keys.push(core_1.normalize(tok.text, options));
+                keys.push((0, core_1.normalize)(tok.text, options));
                 depth = tok.depth;
                 paragraph = [];
                 break;
@@ -107,7 +89,7 @@ function parse(str, options = {}) {
             // @ts-ignore
             case 'text2':
             case 'text':
-                core_1.put(conf, keys, tok.text, undefined, undefined, options, {
+                (0, core_1.put)(conf, keys, tok.text, undefined, undefined, options, {
                     type,
                 });
                 break;
@@ -133,7 +115,7 @@ function parse(str, options = {}) {
                             paragraph: paragraph2,
                         });
                     }
-                    core_1.put(conf, keys, val, true, undefined, options);
+                    (0, core_1.put)(conf, keys, val, true, undefined, options);
                     paragraph = [];
                 }
                 else {
@@ -151,10 +133,10 @@ function parse(str, options = {}) {
                     val = new RawObject_1.RawObject(val, tok);
                     val.getRawData().paragraph = paragraph;
                 }
-                core_1.put(conf, keys, val, true, undefined, options);
+                (0, core_1.put)(conf, keys, val, true, undefined, options);
                 break;
             case 'table':
-                core_1.put(conf, keys, null, null, { headers: tok.header, rows: tok.cells }, options);
+                (0, core_1.put)(conf, keys, null, null, { headers: tok.header, rows: tok.cells }, options);
                 break;
             case 'html':
                 val = val.replace(/\s+$/g, '');
@@ -162,7 +144,7 @@ function parse(str, options = {}) {
                     val = new RawObject_1.RawObject(val, tok);
                     val.getRawData().paragraph = paragraph;
                 }
-                core_1.put(conf, keys, val, true, undefined, options);
+                (0, core_1.put)(conf, keys, val, true, undefined, options);
                 break;
             default:
                 //console.log(tok);
@@ -184,9 +166,9 @@ function parse(str, options = {}) {
                 // @ts-ignore
                 let kk = keys[i - 1];
                 // @ts-ignore
-                let parent = core_1.getobjectbyid(keys.slice(0, i - 1), conf);
+                let parent = (0, core_1.getobjectbyid)(keys.slice(0, i - 1), conf);
                 // @ts-ignore
-                let obj = core_1.getobjectbyid(keys.slice(0, i), conf);
+                let obj = (0, core_1.getobjectbyid)(keys.slice(0, i), conf);
                 let ok = true;
                 for (let j in obj) {
                     if (!/^\d+$/.test(j)) {
@@ -248,11 +230,11 @@ function stringify(dataInput, level = 1, skip = [], k) {
                 rs2.push('#'.repeat(level) + ' ' + k + crlf_normalize_1.LF);
                 rs2.push(stringify(row, level + 1));
             }
-            else if (is_plain_object_1.isPlainObject(row)) {
+            else if ((0, is_plain_object_1.isPlainObject)(row)) {
                 rs2.push('#'.repeat(level) + ' ' + k + crlf_normalize_1.LF);
                 rs2.push(stringify(row, level + 1));
             }
-            else if (moment_1.isMoment(row)) {
+            else if ((0, moment_1.isMoment)(row)) {
                 rs1.push(`- ${k}: ${row.format()}`);
             }
             else if (isRawObject || typeof row == 'string' && /[\r\n]|^\s/g.test(row)) {
@@ -263,14 +245,14 @@ function stringify(dataInput, level = 1, skip = [], k) {
                     let rawData = data[k].getRawData() || {};
                     if (rawData.type != 'html') {
                         lang = rawData.lang;
-                        val = core_1.makeCodeBlock(val, lang);
+                        val = (0, core_1.makeCodeBlock)(val, lang);
                     }
                     else {
                         val = crlf_normalize_1.LF + val + crlf_normalize_1.LF;
                     }
                 }
                 else {
-                    val = core_1.makeCodeBlock(val, lang);
+                    val = (0, core_1.makeCodeBlock)(val, lang);
                 }
                 rs2.push('#'.repeat(level) + ' ' + k + crlf_normalize_1.LF);
                 rs2.push(val);
@@ -292,14 +274,14 @@ function stringify(dataInput, level = 1, skip = [], k) {
         if (isRawObject) {
             let rawData = dataInput.getRawData() || {};
             if (rawData.type != 'html') {
-                val = core_1.makeCodeBlock(val, rawData.lang);
+                val = (0, core_1.makeCodeBlock)(val, rawData.lang);
             }
             else {
                 val = crlf_normalize_1.LF + val + crlf_normalize_1.LF;
             }
         }
         else {
-            val = core_1.makeCodeBlock(val);
+            val = (0, core_1.makeCodeBlock)(val);
         }
         rs2.push(val);
     }

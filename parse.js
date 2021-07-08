@@ -9,7 +9,7 @@ const core_1 = require("./core");
 function parse(str, options = {
     oldParseApi: true,
 }) {
-    return core_1.parse(str, options);
+    return (0, core_1.parse)(str, options);
 }
 parse.parse = core_1.parse;
 parse.default = core_1.parse;
